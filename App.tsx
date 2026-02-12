@@ -141,7 +141,7 @@ const App: React.FC = () => {
                   speed: config.speed || 'normal', 
                   seeds: seeds,
                   toneDescription: config.toneDescription || '',
-                  temperature: config.temperature !== undefined ? config.temperature : 1.0,
+                  temperature: config.temperature !== undefined ? config.temperature : 0.7,
               }];
           }));
           setSpeakerConfigs(migratedConfigs);
@@ -184,7 +184,7 @@ const App: React.FC = () => {
             speed: 'normal', 
             seeds: createDefaultSeeds(voiceIndex === 0 ? undefined : (INITIAL_DEFAULT_SEEDS[0] + (voiceIndex * 10))),
             toneDescription: '',
-            temperature: 1.0,
+            temperature: 0.7,
           });
         }
         voiceIndex++;
